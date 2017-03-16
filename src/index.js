@@ -29,6 +29,8 @@ var init        = require('./init'),
   *
   */
 
+'use strict';
+
 function GridGame(gameSettings) {
 
   // checks if gameSettings is an object and has the required properties
