@@ -13,6 +13,7 @@ use them to play a nice little fibinacci game?
 Usage
 -----
 1. Git clone the repo into your local folder
+2. run  ``` npm install ``` to install babel and watchify
 2. Start dist/index.html
 3. Play the game :)
 
@@ -37,6 +38,15 @@ var game = new GridGame({
 // initialize game
 game.init();
 
-// => Have fun
+```
 
+Save the game and then run:
+
+```
+npm run bundle
+```
+
+If you wan
+```
+npm run build
 ```
