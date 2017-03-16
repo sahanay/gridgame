@@ -18,7 +18,6 @@ var $id               = require('./utils').id,
                         window.WebKitMutationObserver ||
                         window.MozMutationObserver;
 
-'use strict'
 
 function init() {
 
