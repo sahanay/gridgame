@@ -10,7 +10,6 @@
   * are firing when value of the cell changes.
   *
   * @param <Element>
-  * @return <Boolean>
   *
   */
 
