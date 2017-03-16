@@ -11,6 +11,8 @@
   "author": "S. Aydin",
   "license": "UNLICENSED",
   "devDependencies": {
-    "jest": "^19.0.2"
+    "browserify": "^14.1.0",
+    "jest": "^19.0.2",
+    "watchify": "^3.9.0"
   }
 }
