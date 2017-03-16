@@ -1,0 +1,16 @@
+{
+  "name": "gridapp",
+  "version": "0.0.1",
+  "description": "GridApp. The fun fibonacci game.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "watchify src/setupGame.js -o dist/bundle.js",
+    "bundle": "browserify src/setupGame.js | uglifyjs > dist/bundle.js"
+  },
+  "author": "S. Aydin",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}
