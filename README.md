@@ -1,5 +1,7 @@
-GridGame
+GridGame v 0.5
+(not stable)
 ====
+
 
 
 
@@ -7,6 +9,8 @@ Why another GridGame?
 ---------------------
 Grids are all over the place. Why only use grids for layout when we can
 use them to play a nice little fibinacci game?
+
+
 
 ```html
 <!-- Create an element -->
