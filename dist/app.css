@@ -3,18 +3,29 @@
   height:           100%;
 }
 
+#gridgame .black-text {
+  color:            #666666;
+  transition:       color 1s linear;
+}
+
 #gridgame td {
   border-radius:    20px;
   text-align:       center;
-  background-color: red;
+  background-color: #e6e6e6;
   color:            white;
   cursor:           pointer;
-  padding:          2px;
-  border:           1px solid black;
-  transition:       background-color 1s linear;
+  padding:          1px;
+  border:           1px solid transparent;
+  transition:       background-color 1s linear, border 1s linear;
 }
 
-#gridgame .bright-yellow {
+#gridgame td:hover {
+  border:           1px solid black;
+  transition:       border 0.1s linear;
+}
+
+#gridgame td.bright-yellow {
+  color:            white;
   background-color: yellow;
-  transition:       background-color 1s linear;
+  transition:       background-color 1s linear, color 1s linear;
 }
