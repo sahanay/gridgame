@@ -47,7 +47,8 @@ function updateNode(event) {
       // here we prevent duplicate updates of the event.target
       // because the updateRow function already updates this
       // cell
-      if (el === _cells[i]) { continue };
+      var thisCell = _cells[i]
+      if (el === thisCell) { continue };
 
       // update only the cells whose cellIndex number is
       // equal to that of the event.target
@@ -55,8 +56,8 @@ function updateNode(event) {
 
         // IIFE to prevent collusion with the row setTimeout function
         (function() {
-          var cell              = _cells[i],
-              currentValue      = parseInt(_cells[i].textContent),
+          var cell              = thisCell,
+              currentValue      = parseInt(cell.textContent),
               newValue          = currentValue + 1;
 
           cell.textContent = newValue;
@@ -64,6 +65,7 @@ function updateNode(event) {
 
           setTimeout(function() {
             cell.classList.remove('bright-yellow');
+            cell.classList.add('black-text');
           }, 950);
         })();
 
@@ -82,14 +84,16 @@ function updateNode(event) {
 
       // prevent collusion with column setTimeout funtion
       (function() {
-        var cell = _rowCells[i];
-        var value = parseInt(cell.textContent);
-        var newValue = value + 1;
+        var cell = _rowCells[i],
+            value = parseInt(cell.textContent),
+            newValue = value + 1;
+
         cell.textContent = newValue;
         cell.classList.add('bright-yellow');
 
         setTimeout(function() {
           cell.classList.remove('bright-yellow');
+          cell.classList.add('black-text');
         }, 950);
       })();
 

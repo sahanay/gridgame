@@ -20,7 +20,6 @@ var init        = require('./init'),
     $create     = require('./utils').create,
     check       = require('./checkGameSettings');
 
-
 /**
   *
   * GridGame Constructor

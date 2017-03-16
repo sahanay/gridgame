@@ -18,7 +18,6 @@ var $id               = require('./utils').id,
                         window.WebKitMutationObserver ||
                         window.MozMutationObserver;
 
-
 function init() {
 
   // in this app we make use of the Element.closest() Web API.
@@ -44,11 +43,8 @@ function init() {
       node    = $id(this.el),
       table   = this.table;
 
-  node.style.width  = "95vw";
-  node.style.height = "95vh";
-  node.style.margin = "10px";
-  node.style.margin = "0 auto";
-
+  // set id for the table
+  // for the updateNode function
   table.id = "gridgame";
 
 
@@ -72,7 +68,7 @@ function init() {
           var cell = $create("td");
 
           cell.addEventListener('click', updateNode);
-          cell.innerText = 1;
+          cell.innerText = 0;
           var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
               checkForFibonacci(mutation);
