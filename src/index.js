@@ -1,18 +1,19 @@
 /*
  *
- * Grid App Q42
+ * Grid App
  *
- * Grid app van 50 bij 50 waarbij iedere klik
- * op een cel de huidige met +1 verhoogt. Als 5 cellen
- * naast elkaar op een rij gelijk zijn aan een fibinacci
- * reeks, dan worden de waarden terug gezet naar 0.
+ * A simple grid app which creates a table,
+ * of the provided columns and rows, and changes
+ * the value of each cell in the column and row
+ * of the clicked cell.
+ *
+ * If a fibonacci sequence in a row appears, it then
+ * sets the value back to 0.
  *
  */
 
 /**
-  *
   * Load module dependencies.
-  *
   */
 
 var init        = require('./init'),
@@ -22,9 +23,9 @@ var init        = require('./init'),
 
 /**
   *
-  * Function GridGame
+  * GridGame Constructor
   *
-  * @param
+  * @param <Object>
   *
   */
 
@@ -41,6 +42,6 @@ function GridGame(gameSettings) {
 
 }
 
-GridGame.prototype.init       = init;
+GridGame.prototype.init = init;
 
 module.exports = GridGame;
