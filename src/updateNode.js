@@ -19,7 +19,6 @@
   */
 var $id     = require('./utils').id;
 
-'use strict'
 
 function updateNode(event) {
 
