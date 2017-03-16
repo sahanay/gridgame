@@ -53,9 +53,19 @@ function updateNode(event) {
       // equal to that of the event.target
       if (_cells[i].cellIndex === _currentCellIndex) {
 
-        var currentValue      = parseInt(_cells[i].textContent);
-        var newValue          = currentValue + 1;
-        _cells[i].textContent = newValue;
+        // IIFE to prevent collusion with the row setTimeout function
+        (function() {
+          var cell              = _cells[i],
+              currentValue      = parseInt(_cells[i].textContent),
+              newValue          = currentValue + 1;
+
+          cell.textContent = newValue;
+          cell.classList.add('bright-yellow');
+
+          setTimeout(function() {
+            cell.classList.remove('bright-yellow');
+          }, 950);
+        })();
 
       }
     }
@@ -70,10 +80,19 @@ function updateNode(event) {
 
     for (var i = 0; i < _rowCells.length; i++) {
 
-      var cell = _rowCells[i];
-      var value = parseInt(cell.textContent);
-      var newValue = value + 1;
-      cell.textContent = newValue;
+      // prevent collusion with column setTimeout funtion
+      (function() {
+        var cell = _rowCells[i];
+        var value = parseInt(cell.textContent);
+        var newValue = value + 1;
+        cell.textContent = newValue;
+        cell.classList.add('bright-yellow');
+
+        setTimeout(function() {
+          cell.classList.remove('bright-yellow');
+        }, 950);
+      })();
+
     }
 
   }
