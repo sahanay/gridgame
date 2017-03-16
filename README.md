@@ -46,7 +46,7 @@ Save the game and then run:
 npm run bundle
 ```
 
-If you wan
+You can use wathcify too:
 ```
 npm run build
 ```
