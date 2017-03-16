@@ -16,8 +16,6 @@
   *
   */
 
-'use strict'
-
 function checkForFibonacci(mutationRecord) {
 
   var cell      = mutationRecord.target;
