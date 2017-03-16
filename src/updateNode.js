@@ -32,13 +32,15 @@ function updateNode(event) {
   // updates each cell in the column of the event.target cell
   function updateColumn(rows, cellIndex, index) {
 
+
     var _currentCellIndex = cellIndex,
         _index            = index || 0,
         _rowsLength       = rows.length,
         _rows             = rows;
 
     if (_rowsLength === 0 || _rowsLength <= _index )  { return false };
-    var _cells             = _rows[_index].cells;
+
+    var _cells = _rows[_index].cells;
 
     for (var i = 0; i < _cells.length; i++) {
 
@@ -51,13 +53,9 @@ function updateNode(event) {
       // equal to that of the event.target
       if (_cells[i].cellIndex === _currentCellIndex) {
 
-        (function() {
-
-          var currentValue    = parseInt(_cells[i].textContent);
-          var newValue = currentValue + 1;
-          _cells[i].textContent = newValue;
-
-        })();
+        var currentValue      = parseInt(_cells[i].textContent);
+        var newValue          = currentValue + 1;
+        _cells[i].textContent = newValue;
 
       }
     }
