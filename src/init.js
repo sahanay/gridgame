@@ -41,20 +41,24 @@ function init() {
   var rows    = this.rows,
       columns = this.columns,
       node    = $id(this.el),
-      table   = this.table;
+      table   = this.table,
 
-  // set id for the table
-  // for the updateNode function
+      // Here we save each tablerow as an array inside
+      // the rowsArr. Each array contains the values of the cell.
+      // The cellIndex of the cells correspond to the location
+      // of its value in the array.
+      // We use this array for the checkForFibonacci function.
+      rowsArr = [];
+
+  // Set id for the table for the updateNode function
   table.id = "gridgame";
 
 
   node.appendChild(table);
 
-  // creates a table with the rows and columns
+  // This for-loop creates a table with the rows and columns
   // corresponding to the amount of rows and columns
   // provided by the user
-  // further it adds MutationObservers to each cell
-  // and also an eventlistener listening for click-events
   for (var i = 0; i < rows; i++) {
 
     (function() {
