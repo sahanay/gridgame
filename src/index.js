@@ -13,7 +13,7 @@
  */
 
 /**
-  * Load module dependencies.
+  * Load dependencies.
   */
 
 var init        = require('./init'),
