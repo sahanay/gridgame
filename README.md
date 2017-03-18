@@ -1,4 +1,4 @@
-GridGame v 0.5
+GridGame v 1.0
 (not stable)
 ====
 
