@@ -8,12 +8,45 @@ GridGame v 1.0
 Why another GridGame?
 ---------------------
 Grids are all over the place. Why only use grids for layout when we can
-use them to play a nice little fibinacci game?
+use them to play a nice little fibonacci game?
+
+
+Note:
+The dist folder contains some basic setup for the css and html file.
+In other cases, always include these classes in the following way:
+
+```css
+#gridgame {
+}
+
+#gridgame .black-text {
+}
+
+#gridgame td {
+
+}
+
+#gridgame td:hover {
+
+}
+
+#gridgame td.bright-yellow {
+
+}
+
+#gridgame td.green {
+
+}
+
+```
+The application uses these classes to add effects to cells.
 
 Usage
 -----
-1. Git clone the repo into your local folder
-2. run  ``` npm install ``` to install babel and watchify
+1. Git clone the repo into your local folder (accessing dis/index.html already allows you to play the game)
+2. run  ``` npm install ``` to install dev dependencies
+3. Setup the config var in src/setupGame.js
+4. run ```npm run dev``` in development so you watchify updates dist/bundle.js live (for a minified version, use ```npm run prod```).
 2. Start dist/index.html
 3. Play the game :)
 
@@ -38,15 +71,4 @@ var game = new GridGame({
 // initialize game
 game.init();
 
-```
-
-Save the game and then run:
-
-```
-npm run bundle
-```
-
-You can use watchify too:
-```
-npm run build
 ```
