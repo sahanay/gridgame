@@ -14,5 +14,8 @@
     "browserify": "^14.1.0",
     "jest": "^19.0.2",
     "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
