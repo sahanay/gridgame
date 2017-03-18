@@ -81,10 +81,18 @@ FiboToZeroSetter.prototype.setValuesToZero = function() {
     var _cellIndex = cellIndex,
         _rowIndex  = currentRow,
         _table     = gridgame,
+        _thisCell  = _table.rows[_rowIndex].cells[_cellIndex]
         VALUE     = 0;
 
     // Set the values of all the rows to 0
-    _table.rows[_rowIndex].cells[_cellIndex].textContent = VALUE;
+    _thisCell.textContent = VALUE;
+
+    // add and remove .green class
+    _thisCell.classList.add('green');
+
+    setTimeout(function() {
+      _thisCell.classList.remove('green');
+    }, 700);
 
   }
 
