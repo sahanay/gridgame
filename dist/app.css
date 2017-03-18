@@ -9,14 +9,16 @@
 }
 
 #gridgame td {
-  border-radius:    20px;
+  font-size:        0.6rem;
+  font-family:      arial;
+  border-radius:    40px;
   text-align:       center;
   background-color: #e6e6e6;
   color:            white;
   cursor:           pointer;
   padding:          1px;
   border:           1px solid transparent;
-  transition:       background-color 1s linear, border 1s linear;
+  transition:       background-color 0.5s linear, border 1s linear;
 }
 
 #gridgame td:hover {
@@ -26,12 +28,12 @@
 
 #gridgame td.bright-yellow {
   color:            white;
-  background-color: yellow;
-  transition:       background-color 1s linear, color 1s linear;
+  background-color: #FFF9C4;
+  transition:       background-color 0.5s linear, color 1s linear;
 }
 
 #gridgame td.green {
   color:            white;
-  background-color: green;
-  transition:       background-color 1s linear, color 1s linear;
+  background-color: #C5E1A5;
+  transition:       background-color 0.5s linear, color 1s linear;
 }
