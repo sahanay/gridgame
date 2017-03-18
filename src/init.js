@@ -8,7 +8,7 @@
   */
 
 /**
-  * Load module dependencies
+  * Load dependencies
   */
 var $id               = require('./utils').id,
     $create           = require('./utils').create,
