@@ -13,7 +13,7 @@
 var $id               = require('./utils').id,
     $create           = require('./utils').create,
     updateNode        = require('./updateNode'),
-    checkForFibonacci = require('./checkForFibonacci'),
+    FiboToZeroSetter  = require('./FiboToZeroSetter'),
     MutationObserver  = window.MutationObserver ||
                         window.WebKitMutationObserver ||
                         window.MozMutationObserver;
@@ -48,7 +48,7 @@ function init() {
       // The cellIndex of the cells correspond to the location
       // of its value in the array.
       // We use this array for the checkForFibonacci function.
-      rowsArr = [];
+      tableRowsArr = [];
 
   // Set id for the table for the updateNode function
   table.id = "gridgame";
@@ -64,18 +64,39 @@ function init() {
     (function() {
 
       var row = $create("tr");
+      var rowArray = [];
 
       for (var j = 0; j < columns; j++) {
 
         (function() {
 
           var cell = $create("td");
+          rowArray.push(0);
 
           cell.addEventListener('click', updateNode);
           cell.innerText = 0;
           var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
-              checkForFibonacci(mutation);
+
+              if (parseInt(mutation.target.textContent) >= 6) { return };
+
+              var _cell = mutation.target,
+                  _cellIndex = cell.cellIndex,
+                  _cellValue = parseInt(cell.textContent),
+                  _row = cell.closest('tr'),
+                  _rowIndex = _row.rowIndex,
+                  _table = $id('gridgame');
+
+              // update the new cellvalue
+              tableRowsArr[_rowIndex][_cellIndex] = _cellValue;
+
+              var _rowArray = tableRowsArr[_rowIndex];
+
+              new FiboToZeroSetter(_rowArray, _rowIndex, _table)
+                    .returnIndexes()
+                    .setValuesToZero();
+
+
             });
           });
 
@@ -89,6 +110,7 @@ function init() {
 
       }
 
+      tableRowsArr.push(rowArray);
       table.appendChild(row);
 
     })();
