@@ -93,7 +93,7 @@ FiboToZeroSetter.prototype.setValuesToZero = function() {
     setTimeout(function() {
       _thisCell.classList.remove('green');
       _thisCell.classList.remove('black-text');
-    }, 700);
+    }, 951);
 
   }
 
