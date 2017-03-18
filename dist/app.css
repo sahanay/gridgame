@@ -29,3 +29,9 @@
   background-color: yellow;
   transition:       background-color 1s linear, color 1s linear;
 }
+
+#gridgame td.green {
+  color:            white;
+  background-color: green;
+  transition:       background-color 1s linear, color 1s linear;
+}
