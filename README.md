@@ -1,5 +1,4 @@
 GridGame v 1.0
-(not stable)
 ====
 
 
