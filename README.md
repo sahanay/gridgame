@@ -10,35 +10,6 @@ Grids are all over the place. Why only use grids for layout when we can
 use them to play a nice little fibonacci game?
 
 
-Note:
-The dist folder contains some basic setup for the css and html file.
-In other cases, always include these classes in the following way:
-
-```css
-#gridgame {
-}
-
-#gridgame .black-text {
-}
-
-#gridgame td {
-
-}
-
-#gridgame td:hover {
-
-}
-
-#gridgame td.bright-yellow {
-
-}
-
-#gridgame td.green {
-
-}
-
-```
-The application uses these classes to add effects to cells.
 
 Usage
 -----
@@ -71,3 +42,32 @@ var game = new GridGame({
 game.init();
 
 ```
+Note:
+The dist folder contains some basic setup for the css and html file.
+In other cases, always include these classes in the following way:
+
+```css
+#gridgame {
+}
+
+#gridgame .black-text {
+}
+
+#gridgame td {
+
+}
+
+#gridgame td:hover {
+
+}
+
+#gridgame td.bright-yellow {
+
+}
+
+#gridgame td.green {
+
+}
+
+```
+The application uses these classes to add effects to cells.
