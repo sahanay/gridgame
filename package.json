@@ -13,6 +13,7 @@
   "devDependencies": {
     "browserify": "^14.1.0",
     "jest": "^19.0.2",
+    "uglify": "^0.1.5",
     "watchify": "^3.9.0"
   },
   "dependencies": {
