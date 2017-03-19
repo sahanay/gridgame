@@ -68,8 +68,8 @@ FiboToZeroSetter.prototype.returnIndexes = function() {
 FiboToZeroSetter.prototype.setValuesToZero = function() {
 
   var allCellIndexes = this.indexes,
-      currentRow = this.rowIndex,
-      gridgame = this.table;
+      currentRow     = this.rowIndex,
+      gridgame       = this.table;
 
 
   if (allCellIndexes.length <= 0) { return };
@@ -83,7 +83,7 @@ FiboToZeroSetter.prototype.setValuesToZero = function() {
         _rowIndex  = currentRow,
         _table     = gridgame,
         _thisCell  = _table.rows[_rowIndex].cells[_cellIndex]
-        VALUE     = 0;
+        VALUE      = 0;
 
     // Set the values of all the rows to 0
     _thisCell.textContent = VALUE;
