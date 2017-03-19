@@ -13,11 +13,11 @@
     // utils
 var $id               = require('./utils').id,
     $create           = require('./utils').create,
-    
+
     // operators
     updateNode        = require('./updateNode'),
     FiboToZeroSetter  = require('./FiboToZeroSetter'),
-    
+
     // set mutationobserver if not present in window
     MutationObserver  = window.MutationObserver ||
                         window.WebKitMutationObserver ||
@@ -62,13 +62,13 @@ function init() {
 
   // This for-loop creates a table with the rows and columns
   // corresponding to the amount of rows and columns
-  // provided by the user
+  // provided by the user and the arrays in the rowsArr.
   for (var i = 0; i < rows; i++) {
 
     (function() {
 
-      var row = $create("tr");
-      var rowArray = [];
+      var row      = $create("tr"),
+          rowArray = [];
 
       for (var j = 0; j < columns; j++) {
 
@@ -102,23 +102,21 @@ function init() {
 
             });
           });
-          
+
           // setup observer
           var configuration = { childList: true };
           observer.observe(cell, configuration);
-         
+
           row.appendChild(cell);
 
         })();
-
       }
-      
+
       tableRowsArr.push(rowArray);
       table.appendChild(row);
 
     })();
   }
-
 }
 
 module.exports = init;
