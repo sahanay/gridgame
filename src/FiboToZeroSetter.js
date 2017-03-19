@@ -6,9 +6,9 @@
   * be set to 0 based on the first 5 values of the fibonacci sequence.
   *
   *
-  * @param <Array> arr (the current array of the row)
-  * @param <Integer> rowIndex (the row index of this cell)
-  * @param <DOMElement> table (reference to the table element)
+  * @param {array} arr (the current array of the row)
+  * @param {integer} rowIndex (the row index of this cell)
+  * @param {DOMElement} table (reference to the table element)
   *
   *
   */
