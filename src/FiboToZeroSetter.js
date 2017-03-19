@@ -41,7 +41,6 @@ FiboToZeroSetter.prototype.returnIndexes = function() {
         _nr4 = _currentIndex + 3,
         _nr5 = _currentIndex + 4;
 
-
     if (_arr[_currentIndex] === 1 &&
         _arr[_nr2] === 1 &&
         _arr[_nr3] === 2 &&
@@ -53,7 +52,7 @@ FiboToZeroSetter.prototype.returnIndexes = function() {
 
     return check(_arr, _nr2, _indexes);
   })(this.values);
- 
+
   return this;
 };
 
@@ -70,7 +69,6 @@ FiboToZeroSetter.prototype.setValuesToZero = function() {
   var allCellIndexes = this.indexes,
       currentRow     = this.rowIndex,
       gridgame       = this.table;
-
 
   if (allCellIndexes.length <= 0) { return };
 
@@ -95,9 +93,7 @@ FiboToZeroSetter.prototype.setValuesToZero = function() {
       _thisCell.classList.remove('green');
       _thisCell.classList.remove('black-text');
     }, 951);
-
   }
-
 };
 
 module.exports = FiboToZeroSetter;
