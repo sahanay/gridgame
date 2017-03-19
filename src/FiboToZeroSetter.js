@@ -66,20 +66,20 @@ FiboToZeroSetter.prototype.returnIndexes = function() {
   */
 FiboToZeroSetter.prototype.setValuesToZero = function() {
 
-  var allCellIndexes = this.indexes,
-      currentRow     = this.rowIndex,
-      gridgame       = this.table;
+  var _allCellIndexes = this.indexes,
+      _currentRow     = this.rowIndex,
+      _gridgame       = this.table;
 
-  if (allCellIndexes.length <= 0) { return };
+  if (_allCellIndexes.length <= 0) { return };
 
-  allCellIndexes.forEach(function(index) {
+  _allCellIndexes.forEach(function(index) {
     setElementToZero(index);
   });
 
   function setElementToZero(cellIndex) {
     var _cellIndex = cellIndex,
-        _rowIndex  = currentRow,
-        _table     = gridgame,
+        _rowIndex  = _currentRow,
+        _table     = _gridgame,
         _thisCell  = _table.rows[_rowIndex].cells[_cellIndex]
         VALUE      = 0;
 
