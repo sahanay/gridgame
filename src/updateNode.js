@@ -9,7 +9,7 @@
   * We use textContent instead of innerText to make sure our MutationObservers
   * are firing when value of the cell changes.
   *
-  * @param <Element>
+  * @param {Event} (the click event of the user)
   *
   */
 
