@@ -10,10 +10,15 @@
 /**
   * Load dependencies
   */
+    // utils
 var $id               = require('./utils').id,
     $create           = require('./utils').create,
+    
+    // operators
     updateNode        = require('./updateNode'),
     FiboToZeroSetter  = require('./FiboToZeroSetter'),
+    
+    // set mutationobserver if not present in window
     MutationObserver  = window.MutationObserver ||
                         window.WebKitMutationObserver ||
                         window.MozMutationObserver;
@@ -52,7 +57,6 @@ function init() {
 
   // Set id for the table for the updateNode function
   table.id = "gridgame";
-
 
   node.appendChild(table);
 
@@ -96,20 +100,19 @@ function init() {
                     .returnIndexes()
                     .setValuesToZero();
 
-
             });
           });
-
+          
+          // setup observer
           var configuration = { childList: true };
-
           observer.observe(cell, configuration);
-
+         
           row.appendChild(cell);
 
         })();
 
       }
-
+      
       tableRowsArr.push(rowArray);
       table.appendChild(row);
 
