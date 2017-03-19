@@ -24,7 +24,7 @@ var init        = require('./init'),
   *
   * GridGame Constructor
   *
-  * @param <Object>
+  * @param {Object} gameSettings (contains the settings for the gridgame)
   *
   */
 
