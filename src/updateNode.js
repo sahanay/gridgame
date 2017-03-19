@@ -18,7 +18,6 @@
   */
 var $id     = require('./utils').id;
 
-
 function updateNode(event) {
 
   var table        = $id('gridgame'),
@@ -28,10 +27,8 @@ function updateNode(event) {
       allCellsRow  = table.rows[thisRowNr].cells,
       allRows      = table.rows;
 
-
   // updates each cell in the column of the event.target cell
   function updateColumn(rows, cellIndex, index) {
-
 
     var _currentCellIndex = cellIndex,
         _index            = index || 0,
@@ -43,7 +40,6 @@ function updateNode(event) {
     var _cells = _rows[_index].cells;
 
     for (var i = 0; i < _cells.length; i++) {
-
       // here we prevent duplicate updates of the event.target
       // because the updateRow function already updates this
       // cell
@@ -84,8 +80,9 @@ function updateNode(event) {
 
       // prevent collusion with column setTimeout funtion
       (function() {
-        var cell = _rowCells[i],
-            value = parseInt(cell.textContent),
+
+        var cell     = _rowCells[i],
+            value    = parseInt(cell.textContent),
             newValue = value + 1;
 
         cell.textContent = newValue;
@@ -96,9 +93,7 @@ function updateNode(event) {
           cell.classList.add('black-text');
         }, 950);
       })();
-
     }
-
   }
 
   // ignite updates
