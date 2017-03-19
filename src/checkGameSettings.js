@@ -8,7 +8,7 @@
   * - the types of the properties
   *
   * @param {Object} <settings>
-  * @return {Boolean}
+  * @return {boolean}
   *
   */
 
