@@ -28,18 +28,18 @@ function FiboToZeroSetter (arr, rowIndex, table) {
 FiboToZeroSetter.prototype.returnIndexes = function() {
   this.indexes = (function check(arr, index, indexes) {
 
-    var _arr = arr;
-    var _indexes = indexes || [];
-    var _currentIndex = index || 0;
+    var _arr          = arr,
+        _indexes      = indexes || [],
+        _currentIndex = index || 0;
 
     if (_currentIndex === _arr.length) {
       return _indexes
     }
 
-    var _nr2 = _currentIndex + 1;
-    var _nr3 = _currentIndex + 2;
-    var _nr4 = _currentIndex + 3;
-    var _nr5 = _currentIndex + 4;
+    var _nr2 = _currentIndex + 1,
+        _nr3 = _currentIndex + 2,
+        _nr4 = _currentIndex + 3,
+        _nr5 = _currentIndex + 4;
 
 
     if (_arr[_currentIndex] === 1 &&
@@ -53,6 +53,7 @@ FiboToZeroSetter.prototype.returnIndexes = function() {
 
     return check(_arr, _nr2, _indexes);
   })(this.values);
+ 
   return this;
 };
 
