@@ -4,8 +4,9 @@
 }
 
 #gridgame .black-text {
+  background-color: lightgrey;
   color:            #666666;
-  transition:       color 1s linear;
+  transition:       color 0.5s linear;
 }
 
 #gridgame td {
@@ -18,7 +19,7 @@
   cursor:           pointer;
   padding:          1px;
   border:           1px solid transparent;
-  transition:       background-color 0.5s linear, border 1s linear;
+  transition:       background-color 0.3s linear, border 1s linear;
 }
 
 #gridgame td:hover {
@@ -29,11 +30,11 @@
 #gridgame td.bright-yellow {
   color:            white;
   background-color: #FFF9C4;
-  transition:       background-color 0.5s linear, color 1s linear;
+  transition:       background-color 0.3s linear, color 1s linear;
 }
 
 #gridgame td.green {
   color:            white;
   background-color: #C5E1A5;
-  transition:       background-color 0.5s linear, color 1s linear;
+  transition:       background-color 0.3s linear, color 1s linear;
 }
